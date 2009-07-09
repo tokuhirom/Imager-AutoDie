@@ -25,11 +25,15 @@ __END__
 
 =head1 NAME
 
-Imager::AutoDie -
+Imager::AutoDie - succeed or die
 
 =head1 SYNOPSIS
 
-  use Imager::AutoDie;
+    use Imager;
+    use Imager::AutoDie;
+
+    my $img = Imager->new;
+    $img->read(); # => will be die
 
 =head1 DESCRIPTION
 
