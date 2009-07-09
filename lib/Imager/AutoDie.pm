@@ -1,8 +1,24 @@
 package Imager::AutoDie;
-
 use strict;
 use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.67';
+use Carp;
+
+BEGIN {
+    no strict 'refs';
+    no warnings 'redefine';
+    for my $_meth (qw/read write scaleX scaleY crop rubthrough compose flip/) {
+        my $meth = $_meth;
+        my $orig = Imager->can($meth);
+        *{'Imager::'.$meth} = sub {
+            if (my $ret = $orig->(@_)) {
+                return $ret;
+            } else {
+                Carp::croak("Imager error($meth): " . $_[0]->errstr);
+            }
+        };
+    }
+}
 
 1;
 __END__
