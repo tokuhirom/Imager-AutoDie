@@ -7,7 +7,7 @@ use Carp;
 BEGIN {
     no strict 'refs';
     no warnings 'redefine';
-    for my $_meth (qw/read write scaleX scaleY crop rubthrough compose flip/) {
+    for my $_meth (qw/read write scaleX scaleY crop rubthrough compose flip filter/) {
         my $meth = $_meth;
         my $orig = Imager->can($meth);
         *{'Imager::'.$meth} = sub {
