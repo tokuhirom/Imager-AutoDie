@@ -1,0 +1,73 @@
+{
+   "abstract" : "succeed or die",
+   "author" : [
+      "Tokuhiro Matsuno <tokuhirom  slkjfd gmail.com>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Minilla/v0.11.0, CPAN::Meta::Converter version 2.133380",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Imager-AutoDie",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "xt",
+         "inc",
+         "share",
+         "eg",
+         "examples",
+         "author",
+         "builder"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "CPAN::Meta" : "0",
+            "CPAN::Meta::Prereqs" : "0",
+            "Module::Build" : "0.38"
+         }
+      },
+      "develop" : {
+         "requires" : {
+            "Test::CPAN::Meta" : "0",
+            "Test::MinimumVersion" : "0.10108",
+            "Test::Pod" : "1.41",
+            "Test::Spellunker" : "v0.2.7"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Imager" : "0",
+            "perl" : "5.008001"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::Exception" : "0",
+            "Test::More" : "0"
+         }
+      }
+   },
+   "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/tokuhirom/Imager-AutoDie/issues"
+      },
+      "homepage" : "https://github.com/tokuhirom/Imager-AutoDie",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/tokuhirom/Imager-AutoDie.git",
+         "web" : "https://github.com/tokuhirom/Imager-AutoDie"
+      }
+   },
+   "version" : "0.67",
+   "x_contributors" : [
+      "Tokuhiro Matsuno <tokuhirom@gmail.com>"
+   ]
+}
